@@ -52,10 +52,10 @@ npm install @hooked74/transform
   transform.origin = { x: 1, y: 0.5 };
   transform.scaleX = 2;
 
-   // Use Transformation for SVGElement
-   const transform = new Transform(svgElement);
-   transform.originX = 0.5;
-   transform.y = 100;
+  // Use Transformation for SVGElement
+  const transform = new Transform(svgElement);
+  transform.originX = 0.5;
+  transform.y = 100;
 ```
 
 ### Inheritance

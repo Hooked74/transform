@@ -1,0 +1,136 @@
+{
+  "name": "@hooked74/transform",
+  "version": "1.0.0",
+  "description": "The library parses the matrix transformation and modifies the element",
+  "scripts": {
+    "test": "cross-env CI=true project-tools test --bail --colors --coverage --passWithNoTests",
+    "test:staged": "cross-env CI=true project-tools test --bail --colors --passWithNoTests --findRelatedTests",
+    "test:watch": "project-tools test",
+    "clean": "rimraf dist && rimraf example",
+    "build": "npm run clean && npm run build:lib && npm run build:types && npm run build:size",
+    "build:lib": "cross-env NODE_ENV=production rollup -c",
+    "build:types": "project-tools types && npm run prettier:types && npm run lint:types",
+    "build:size": "project-tools size",
+    "prettier": "prettier --write",
+    "prettier:types": "prettier --write \"dist/**/*.d.ts\"",
+    "lint": "npm run lint:ts && npm run lint:css",
+    "lint:ts": "tslint --fix -p tsconfig.json -c tslint.json",
+    "lint:css": "stylelint \"stories/**/*.{js,jsx}\"",
+    "lint:types": "tslint --fix -p tsconfig.types.json -c tslint.compile.json \"dist/**/*.d.ts\""
+  },
+  "keywords": [
+    "transform",
+    "matrix",
+    "scale",
+    "skew",
+    "translate",
+    "rotate",
+    "origin"
+  ],
+  "sideEffects": false,
+  "author": "Igor Novikov <novikovio74@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "main": "dist/transform.cjs.js",
+  "module": "dist/transform.esm.js",
+  "jsnext:main": "dist/transform.esm.js",
+  "types": "dist/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Hooked74/transform.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Hooked74/transform/issues"
+  },
+  "dependencies": {
+    "@babel/runtime-corejs3": "^7.6.3",
+    "@hooked74/single-purpose-emitter": "^1.2.2"
+  },
+  "devDependencies": {
+    "@atlaskit/css-reset": "^5.0.9",
+    "@babel/plugin-proposal-class-properties": "^7.5.5",
+    "@babel/plugin-proposal-decorators": "^7.6.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.6.2",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/plugin-transform-destructuring": "^7.6.0",
+    "@babel/plugin-transform-runtime": "^7.6.2",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-typescript": "^7.6.0",
+    "@hooked74/project-tools": "^1.2.8",
+    "@svgr/rollup": "^4.3.3",
+    "@types/faker": "^4.1.6",
+    "@types/jest": "^24.0.19",
+    "@types/node": "^12.11.1",
+    "babel-loader": "^8.0.6",
+    "babel-plugin-named-asset-import": "^0.3.4",
+    "cross-env": "^6.0.3",
+    "cross-env-file": "^1.0.0",
+    "custom-tslint-formatters": "^2.4.0",
+    "dotenv": "^8.2.0",
+    "dotenv-cli": "^3.0.0",
+    "faker": "^4.1.0",
+    "husky": "^3.0.9",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "rollup": "^1.24.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-json": "^4.0.0",
+    "rollup-plugin-license": "^0.12.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^2.0.3",
+    "rollup-plugin-size-snapshot": "^0.10.0",
+    "rollup-plugin-strip": "^1.2.2",
+    "rollup-plugin-tslint": "^0.2.2",
+    "rollup-plugin-uglify": "^6.0.3",
+    "rollup-plugin-url": "^3.0.0",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-config-standard": "^19.0.0",
+    "tslint": "^5.20.0",
+    "tslint-config-prettier": "^1.18.0",
+    "tslint-loader": "^3.5.4",
+    "typescript": "^3.6.4"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "post-commit": "git update-index --again"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": [
+      "npm run prettier --",
+      "npm run lint --",
+      "npm run test:staged --",
+      "git add"
+    ],
+    "*.{json,scss,css,md}": [
+      "npm run prettier --",
+      "git add"
+    ]
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "/dist"
+  ]
+}

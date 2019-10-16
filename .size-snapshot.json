@@ -1,0 +1,32 @@
+{
+  "dist/transform.js": {
+    "bundled": 113538,
+    "minified": 39465,
+    "gzipped": 13267
+  },
+  "dist/transform.min.js": {
+    "bundled": 39201,
+    "minified": 38969,
+    "gzipped": 13267
+  },
+  "dist/transform.cjs.js": {
+    "bundled": 29877,
+    "minified": 16959,
+    "gzipped": 4012
+  },
+  "dist/transform.esm.js": {
+    "bundled": 29179,
+    "minified": 16431,
+    "gzipped": 3948,
+    "treeshaked": {
+      "rollup": {
+        "code": 2641,
+        "import_statements": 1288
+      },
+      "webpack": {
+        "code": 9656
+      }
+    }
+  },
+  "module": "3.92 kB"
+}

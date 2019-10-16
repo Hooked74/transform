@@ -28,11 +28,3 @@ deploy:
       repo: Hooked74/transform
     api_key:
       secure: e4/8Ay900Dp+H5eh+pPtDWQxhY3QPxBFHd1WqjLwt3HSdHppKJ0uvLoxyIAgzNB8BPu048Q9qxA5r7WkqqCYo959ZPG97UraS3v13SdSGSYZLWzGVLpG6EiIMju1hDUW8jFzMmh+WKwCpCPgCF3pmfjXHBF3CymsflvbKiqWfVLG49h8H1Vw3NkvuyX/7SqI35MlNxOZo72w1wxvCcX3ZEknhNIMw+RZEEZyGGjARn2o5SLEVl+lj/Jm5uPJFoto+IcgKRpkzTwXD31ACQ3IF5GGxgiFI2p0/whMuEKdcaYMRhAm2q/Vcj84Okx3WZ340NB74D0YHIwo3bIq3WeHL4JXTaK6AmcT9MD26uFSv8AyAJ81DWAUhYD4lH31WEymiT8MMX/Eg0y5aJ1idQX1WVtvyai1J+8KEw4alat6vpWefb2RmClmgN8VPSnXKUKK2A5VPekKRPGR+ib3flN5H+2bvUxZbjpnyc42bEm9UVlSUXzly6HD11jP4IEk71KFaQRYG+8Rwva7VYl82vJbXe9xLuEMmU7WABgm5QIXpzGpPC3EnDD4+1213A62yX3ZZKPLJVzsNDoWl8VovnP6aHRI1GVDUuWwOjNQSz7CMYhR5rxGnj5hxVs+yIP5VLyFTDEyaJMxfdr1DijsEwFXGTz7MmibQwyVCBFlqmJyVgU=
-  - provider: pages
-    skip_cleanup: true
-    github_token: $GITHUB_TOKEN
-    keep_history: true
-    local_dir: example
-    on:
-      branch: master
-      repo: Hooked74/transform

@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/Hooked74/transform.svg?branch=master)](https://travis-ci.org/Hooked74/transform)
 [![npm](https://img.shields.io/npm/v/@hooked74/transform)](https://www.npmjs.com/package/@hooked74/transform)
 [![License](https://img.shields.io/npm/l/@hooked74/transform)](https://github.com/Hooked74/transform/blob/master/LICENSE)
-[![Codecov](https://img.shields.io/codecov/c/github/Hooked74/transform?token=<token>)](https://codecov.io/gh/Hooked74/transform) <!-- TODO: add codecov token -->
+[![codecov](https://codecov.io/gh/Hooked74/transform/branch/master/graph/badge.svg)](https://codecov.io/gh/Hooked74/transform)
 [![Module Size](https://img.shields.io/badge/dynamic/json?color=success&label=module%20size&query=%24.module&url=https%3A%2F%2Fraw.githubusercontent.com%2FHooked74%2Ftransform%2Fmaster%2F.size-snapshot.json)](https://github.com/Hooked74/transform/blob/master/.size-snapshot.json)
 
 ## Table of contents

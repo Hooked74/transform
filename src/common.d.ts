@@ -119,5 +119,3 @@ declare namespace TransformCommon {
 }
 
 import H74_T = TransformCommon;
-
-declare module "rematrix";

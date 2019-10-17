@@ -1,6 +1,6 @@
 {
   "name": "@hooked74/transform",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "The library parses the matrix transformation and modifies the element",
   "scripts": {
     "test": "cross-env CI=true project-tools test --bail --colors --coverage --passWithNoTests",
@@ -47,7 +47,7 @@
   },
   "dependencies": {
     "@babel/runtime-corejs3": "^7.6.3",
-    "@hooked74/single-purpose-emitter": "^1.2.2"
+    "@hooked74/single-purpose-emitter": "^1.2.3"
   },
   "devDependencies": {
     "@atlaskit/css-reset": "^5.0.9",

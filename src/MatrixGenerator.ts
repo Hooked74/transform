@@ -4,7 +4,7 @@ import { roundTo } from "./utils";
 export default class MatrixGenerator {
   private static matrices: Map<string, string> = new Map();
 
-  public generate(matrixState: MatrixState, transformOrder: H74_T.TransformOrder): string {
+  public generate(matrixState: MatrixState, transformOrder: Array<keyof MatrixState>): string {
     const { matrices }: typeof MatrixGenerator = MatrixGenerator;
     const transform: string = Object.values(matrixState).reduce(
       (accum: string, state: MatrixStateUnion) => (accum += state),
@@ -29,13 +29,15 @@ export default class MatrixGenerator {
 
   private generateTransformMatrix(
     matrixState: MatrixState,
-    transformOrder: H74_T.TransformOrder
+    transformOrder: Array<keyof MatrixState>
   ): float[] {
-    return transformOrder.reduce((inputMatrix: float[], key: keyof MatrixState): float[] => {
-      return inputMatrix
-        ? this.multiplyMatrices(inputMatrix, matrixState[key].matrix)
-        : matrixState[key].matrix;
-    }, null);
+    return transformOrder.reduce(
+      (inputMatrix: float[], key: keyof MatrixState): float[] =>
+        inputMatrix
+          ? this.multiplyMatrices(inputMatrix, matrixState[key].matrix)
+          : matrixState[key].matrix,
+      null
+    );
   }
 
   // prettier-ignore

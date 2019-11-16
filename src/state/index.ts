@@ -15,6 +15,7 @@ export interface MatrixState {
   skew: SkewState;
   translate: TranslateState;
 }
+
 export type TransformStateUnion = TransformState[keyof TransformState];
 export type MatrixStateUnion = MatrixState[keyof MatrixState];
 

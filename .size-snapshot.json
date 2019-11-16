@@ -1,13 +1,13 @@
 {
   "dist/transform.js": {
-    "bundled": 113540,
-    "minified": 39465,
-    "gzipped": 13267
+    "bundled": 115009,
+    "minified": 39755,
+    "gzipped": 13426
   },
   "dist/transform.min.js": {
-    "bundled": 39201,
-    "minified": 38969,
-    "gzipped": 13267
+    "bundled": 39494,
+    "minified": 39251,
+    "gzipped": 13411
   },
   "dist/transform.cjs.js": {
     "bundled": 29877,
